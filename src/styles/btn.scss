@@ -1,0 +1,68 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  height: 36px;
+  font-family: "OpenSans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $c-accent;
+  border-radius: 52px;
+
+  &__filter {
+    width: 128px;
+    font-size: 12px;
+    border-color: $c-accentLight;
+
+    &:hover {
+      color: $c-accentLight;
+    }
+  }
+
+  &__card {
+    width: 137px;
+    font-size: 10px;
+    border-color: $c-accent;
+
+    @media (max-width: $tabletBreakpoint) {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: $c-accent;
+    }
+
+    &--is-active {
+      color: #fff;
+      background-color: $c-accent;
+    }
+  }
+
+  &__plus {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__part {
+    display: block;
+    width: 12px;
+    height: 2px;
+    background-color: $c-accent;
+    border-radius: 1px;
+    transition: background-color 0.15s;
+
+    &--vertical {
+      position: absolute;
+      transform: rotate(90deg);
+    }
+  }
+
+  &:hover .btn__part {
+    background-color: $c-accentLight;
+  }
+}

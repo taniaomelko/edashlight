@@ -1,0 +1,22 @@
+.container-fluid {
+  display: grid;
+  grid-template-areas: "header main" "nav main";
+  grid-template-columns: 297px 1fr;
+  grid-template-rows: 59px 1fr;
+  max-width: 1600px;
+  padding: 0;
+
+  @media (max-width: 1000px) {
+    grid-template-areas: "header" "main";
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+  }
+}
+
+.card-body {
+  box-shadow: $containerBoxShadow;
+}
+
+#chartContainer {
+  height: 100%;
+}
